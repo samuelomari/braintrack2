@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <img src="logo.png" alt="Braintrack Logo" class="logo">
+        <p>Study Guide</p>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="info.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="studyguide.html">Study Guide</a></li>
+        </ul>
+    </nav>
+    <section class="study-guide">
+        <h1>Study Guide</h1>
+        <p>Welcome to the BrainTrack Study Guide! This guide is designed to help you create effective study plans and strategies to enhance your learning experience. Whether you're preparing for exams, working on a project, or simply looking to improve your study habits, this guide has you covered.</p>
+        
+        <h2>Creating a Study Plan</h2>
+        <p>Start by assessing your current study habits and identifying areas for improvement. Set specific goals for what you want to achieve in your studies and create a schedule that allows you to dedicate time to each subject or topic. Remember to include breaks and time for relaxation to avoid burnout.</p>
+        
+        <div class="card"
+        <h2>Effective Study Techniques</h2>
+        <p>Experiment with different study techniques to find what works best for you. Some popular methods include:</p>
+        <ul>
+            <li><strong>Active Recall:</strong> Test yourself on the material you're studying instead of just passively reading it.</li>
+            <li><strong>Spaced Repetition:</strong> Review the material at increasing intervals over time to enhance long-term retention.</li>
+            <li><strong>Mind Mapping:</strong> Create visual diagrams to connect concepts and ideas.</li>
+            <li><strong>Technique:</strong> Study in focused bursts of time (e.g., 25 minutes) followed by short breaks.</li>
+        </ul>
+        </div>
+            
+    </section>
+
+  <section class="info-card">
+    <div class="card">
+      <h2>Study Tips</h2>
+      <p>Here are some additional tips to help you make the most of your study sessions:</p>
+      <ul>
+        <li>✔ Create a dedicated study space free from distractions</li>
+        <li>✔ Set specific goals for each study session</li>
+        <li>✔ Use active learning techniques like summarizing and teaching others</li>
+        <li>✔ Take regular breaks to maintain focus and prevent burnout</li>
+      </ul>
+    </div>
+    </section>
+    
+   <section class="content">
+    <h1>Study Planner</h1>
+    <input type="text" id="taskInput" placeholder="Enter a task">
+    <button onclick="addTask()">Add Task</button>
+    <ul id="taskList"></ul>
+   </section>
+    
+   <section class="content">
+    <h2>Focus Timer</h2>
+    <h3 id="timer">25:00</h3>
+    <button onclick="startTimer()">Start</button>
+    <button onclick="resetTimer()">Reset</button>
+   </section>
+    
+    <footer>
+        <p>© 2026 BrainTrack</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
