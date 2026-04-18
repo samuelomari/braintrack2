@@ -83,7 +83,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-Samuel Omari - [Your Email or Contact Info]
+Samuel Omari - [samuel.omari@student.moringaschool.com]
 
 Project Link: [https://github.com/samuelomari/braintrack2](https://github.com/samuelomari/braintrack2)
 
