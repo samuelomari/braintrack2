@@ -67,6 +67,59 @@ braintrack2/
 └── README.md           # This file
 ```
 
+## Deployment
+
+### Automated Deployment (GitHub Actions)
+
+The project includes automated deployment to GitHub Pages using GitHub Actions:
+
+1. **Automatic Deployment**: Every push to the `main` branch triggers:
+   - Automated testing
+   - Code quality checks
+   - Accessibility testing
+   - Production build with minification
+   - Deployment to GitHub Pages
+
+2. **Live Site**: Visit your deployed site at: `https://samuelomari.github.io/braintrack2/`
+
+### Manual Deployment
+
+For manual deployment:
+
+```bash
+# Run the deployment script
+./deploy.sh
+
+# Or manually:
+npm ci
+npm test
+npm run build
+```
+
+### Local Development
+
+```bash
+# Install dependencies
+npm install
+
+# Run tests
+npm test
+
+# Start development server
+npm run dev
+
+# Performance audit
+npm run audit:performance
+```
+
+## CI/CD Pipeline
+
+The project uses GitHub Actions for continuous integration and deployment:
+
+- **deploy.yml**: Handles production deployment to GitHub Pages
+- **quality.yml**: Runs code quality checks on all PRs and pushes
+- **Automated checks**: HTML validation, CSS linting, accessibility testing, security auditing
+
 ## Contributing
 
 Contributions are welcome! Please follow these steps:
