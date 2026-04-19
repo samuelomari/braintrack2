@@ -43,3 +43,11 @@ function resetTimer() {
   timerRunning = false;
   document.getElementById("timer").textContent = "25:00";
 }
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = {
+    addTask,
+    startTimer,
+    resetTimer,
+  };
+}
