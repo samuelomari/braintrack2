@@ -88,3 +88,39 @@ function clearForm(form) {
     input.classList.remove('error');
   });
 }
+
+/**
+ * Format time in MM:SS format
+ * @param {number} seconds - Total seconds to format
+ * @returns {string} - Formatted time string
+ */
+function formatTime(seconds) {
+  const minutes = Math.floor(seconds / 60);
+  const secs = seconds % 60;
+  return `${String(minutes).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+}
+
+/**
+ * Save task to localStorage
+ * @param {string} taskText - Task description to save
+ */
+function saveTask(taskText) {
+  const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+  tasks.push({ text: taskText, completed: false, timestamp: Date.now() });
+  localStorage.setItem('tasks', JSON.stringify(tasks));
+}
+
+/**
+ * Load tasks from localStorage
+ * @returns {array} - Array of saved tasks
+ */
+function loadTasks() {
+  return JSON.parse(localStorage.getItem('tasks')) || [];
+}
+
+/**
+ * Clear all saved tasks from localStorage
+ */
+function clearAllTasks() {
+  localStorage.removeItem('tasks');
+}
