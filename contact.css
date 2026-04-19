@@ -115,3 +115,49 @@ navbar {
 .navlinks a:hover {
     color: #2b2e2b;
 }
+
+/* Responsive design for contact page */
+@media (max-width: 768px) {
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .info-card {
+    margin-bottom: 16px;
+  }
+
+  .form-container {
+    width: 100%;
+  }
+
+  .sidebar {
+    margin-top: 24px;
+    width: 100%;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .form-group {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+}
+
+/* Enhanced form group styling */
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: inherit;
+}
