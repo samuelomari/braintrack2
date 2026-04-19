@@ -10,7 +10,7 @@
 <body>
     <nav>
         <img src="logo.png" alt="Braintrack Logo" class="logo">
-        <p>Study Guide</p>
+        <h1>Study Guide</h1>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="info.html">About</a></li>
@@ -18,54 +18,68 @@
             <li><a href="studyguide.html">Study Guide</a></li>
         </ul>
     </nav>
-    <section class="study-guide">
-        <h1>Study Guide</h1>
-        <p>Welcome to the BrainTrack Study Guide! This guide is designed to help you create effective study plans and strategies to enhance your learning experience. Whether you're preparing for exams, working on a project, or simply looking to improve your study habits, this guide has you covered.</p>
-        
-        <h2>Creating a Study Plan</h2>
-        <p>Start by assessing your current study habits and identifying areas for improvement. Set specific goals for what you want to achieve in your studies and create a schedule that allows you to dedicate time to each subject or topic. Remember to include breaks and time for relaxation to avoid burnout.</p>
-        
-        <div class="card">
-        <h2>Effective Study Techniques</h2>
-        <p>Experiment with different study techniques to find what works best for you. Some popular methods include:</p>
-        <ul>
-            <li><strong>Active Recall:</strong> Test yourself on the material you're studying instead of just passively reading it.</li>
-            <li><strong>Spaced Repetition:</strong> Review the material at increasing intervals over time to enhance long-term retention.</li>
-            <li><strong>Mind Mapping:</strong> Create visual diagrams to connect concepts and ideas.</li>
-            <li><strong>Technique:</strong> Study in focused bursts of time (e.g., 25 minutes) followed by short breaks.</li>
-        </ul>
-        </div>
-            
-    </section>
 
-  <section class="info-card">
-    <div class="card">
-      <h2>Study Tips</h2>
-      <p>Here are some additional tips to help you make the most of your study sessions:</p>
-      <ul>
-        <li>✔ Create a dedicated study space free from distractions</li>
-        <li>✔ Set specific goals for each study session</li>
-        <li>✔ Use active learning techniques like summarizing and teaching others</li>
-        <li>✔ Take regular breaks to maintain focus and prevent burnout</li>
-      </ul>
-    </div>
-    </section>
-    
-   <section class="content">
-    <h1>Study Planner</h1>
-    <input type="text" id="taskInput" placeholder="Enter a task">
-    <button onclick="addTask()">Add Task</button>
-    <ul id="taskList"></ul>
-   </section>
-    
-   <section class="content">
-    <h2>Focus Timer</h2>
-    <h3 id="timer">25:00</h3>
-    <button onclick="startTimer()">Start</button>
-    <button onclick="resetTimer()">Reset</button>
-   </section>
-    
-    <p class="quote">Success doesn't come from what you do occasionally, but what you do consistently."</p>
+    <main>
+        <section class="study-guide" aria-label="Study Guide Content">
+            <header>
+                <h1>Study Guide</h1>
+                <p>Welcome to the BrainTrack Study Guide! This guide is designed to help you create effective study plans and strategies to enhance your learning experience. Whether you're preparing for exams, working on a project, or simply looking to improve your study habits, this guide has you covered.</p>
+            </header>
+
+            <section class="guide-section">
+                <h2>Creating a Study Plan</h2>
+                <p>Start by assessing your current study habits and identifying areas for improvement. Set specific goals for what you want to achieve in your studies and create a schedule that allows you to dedicate time to each subject or topic. Remember to include breaks and time for relaxation to avoid burnout.</p>
+            </section>
+
+            <article class="card">
+                <h2>Effective Study Techniques</h2>
+                <p>Experiment with different study techniques to find what works best for you. Some popular methods include:</p>
+                <ul>
+                    <li><strong>Active Recall:</strong> Test yourself on the material you're studying instead of just passively reading it.</li>
+                    <li><strong>Spaced Repetition:</strong> Review the material at increasing intervals over time to enhance long-term retention.</li>
+                    <li><strong>Mind Mapping:</strong> Create visual diagrams to connect concepts and ideas.</li>
+                    <li><strong>Pomodoro Technique:</strong> Study in focused bursts of time (e.g., 25 minutes) followed by short breaks.</li>
+                </ul>
+            </article>
+
+            <article class="card study-tips">
+                <h2>Study Tips</h2>
+                <p>Here are some additional tips to help you make the most of your study sessions:</p>
+                <ul>
+                    <li>✔ Create a dedicated study space free from distractions</li>
+                    <li>✔ Set specific goals for each study session</li>
+                    <li>✔ Use active learning techniques like summarizing and teaching others</li>
+                    <li>✔ Take regular breaks to maintain focus and prevent burnout</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="interactive-tools" aria-label="Study Tools">
+            <section class="planner-section" aria-label="Study Planner">
+                <h2>Study Planner</h2>
+                <div class="tool-container">
+                    <input type="text" id="taskInput" placeholder="Enter a task" aria-label="New task">
+                    <button onclick="addTask()" aria-label="Add new task">Add Task</button>
+                </div>
+                <ul id="taskList" aria-label="Task List"></ul>
+            </section>
+
+            <section class="timer-section" aria-label="Focus Timer">
+                <h2>Focus Timer</h2>
+                <div class="timer-display">
+                    <h3 id="timer" aria-live="polite">25:00</h3>
+                    <div class="timer-controls">
+                        <button onclick="startTimer()" aria-label="Start timer">Start</button>
+                        <button onclick="resetTimer()" aria-label="Reset timer">Reset</button>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section class="closing" aria-label="Inspirational Quote">
+            <blockquote class="quote">Success doesn't come from what you do occasionally, but what you do consistently.</blockquote>
+        </section>
+    </main>
 
     <footer>
         <p>&copy; 2026 Braintrack. All rights reserved.</p>
