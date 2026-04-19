@@ -4,7 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "npm run minify-css && npm run minify-js && npm run update-html",
+    "minify-css": "cleancss -o style.min.css style.css && cleancss -o index.min.css index.css && cleancss -o contact.min.css contact.css && cleancss -o studyguide.min.css studyguide.css && cleancss -o info.min.css info.css",
+    "minify-js": "uglifyjs script.js -o script.min.js",
+    "update-html": "sed -i 's/style.css/style.min.css/g' *.html && sed -i 's/index.css/index.min.css/g' index.html && sed -i 's/contact.css/contact.min.css/g' contact.html && sed -i 's/studyguide.css/studyguide.min.css/g' studyguide.html && sed -i 's/info.css/info.min.css/g' info.html && sed -i 's/script.js/script.min.js/g' studyguide.html",
+    "dev": "http-server -p 3000",
+    "lint": "echo 'No linter configured yet'",
+    "audit:performance": "lighthouse http://localhost:3000 --output=json --output-path=./performance-report.json"
   },
   "repository": {
     "type": "git",
@@ -19,7 +26,11 @@
   "homepage": "https://github.com/samuelomari/braintrack2#readme",
   "devDependencies": {
     "jest": "^30.3.0",
-    "jest-environment-jsdom": "^30.3.0"
+    "jest-environment-jsdom": "^30.3.0",
+    "clean-css-cli": "^5.6.3",
+    "uglify-js": "^3.17.4",
+    "http-server": "^14.1.1",
+    "lighthouse": "^11.4.0"
   },
   "dependencies": {
     "dotenv": "^17.4.2"

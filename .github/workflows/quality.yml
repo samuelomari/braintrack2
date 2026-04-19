@@ -1,0 +1,44 @@
+name: Code Quality Checks
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Run tests
+      run: npm test
+
+    - name: Check HTML validity
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y tidy
+        for file in *.html; do
+          echo "Checking $file..."
+          tidy -q -e "$file" || echo "Issues found in $file"
+        done
+
+    - name: Check CSS validity
+      run: |
+        npm install -g stylelint
+        npx stylelint "**/*.css" --config .stylelintrc.json || true
+
+    - name: Security audit
+      run: npm audit --audit-level moderate
