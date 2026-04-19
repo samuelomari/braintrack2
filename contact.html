@@ -10,7 +10,7 @@
 <body>
     <nav>
         <img src="logo.png" alt="Braintrack Logo" class="logo">
-        <p>Contact Us</p>
+        <h1>Contact Us</h1>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="info.html">About</a></li>
@@ -19,82 +19,111 @@
         </ul>
     </nav>
 
-<section class="info-cards">
-  <div class="card">
-    <h3>Phone</h3>
-    <p>Main: +254 700 123 456</p>
-    <p> +254 700 123 546</p>
-    <p>Mon-Fri 8:00 AM - 6:00 PM </p>
-    <p>Sat-Sun 9:00 AM - 4:00 PM</p>
-  </div>
-</section>
- 
-<section class="info-cards">
-    <div class="card">
-      <h3>Email</h3>
-      <p>General Inquiries: info@braintrack.com</p>
-      <p>BrainTrack Support: support@braintrack.com</p>
-      <p>Partnerships: partnerships@braintrack.com</p>
-    </div>
-</section>
- 
-<!-- MAIN CONTENT -->
-<section class="main">
+    <main>
+        <section class="contact-info" aria-label="Contact Methods">
+            <article class="info-card">
+                <h2>Phone</h2>
+                <address>
+                    <p><strong>Main:</strong> <a href="tel:+254700123456">+254 700 123 456</a></p>
+                    <p><strong>Support:</strong> <a href="tel:+254700123546">+254 700 123 546</a></p>
+                    <p><strong>Hours:</strong></p>
+                    <ul>
+                        <li>Mon-Fri: 8:00 AM - 6:00 PM</li>
+                        <li>Sat-Sun: 9:00 AM - 4:00 PM</li>
+                    </ul>
+                </address>
+            </article>
 
-  <!-- FORM -->
-  <div class="form-container">
-    <h2>Send Us a Message</h2>
+            <article class="info-card">
+                <h2>Email</h2>
+                <address>
+                    <p><strong>General Inquiries:</strong> <a href="mailto:info@braintrack.com">info@braintrack.com</a></p>
+                    <p><strong>Support:</strong> <a href="mailto:support@braintrack.com">support@braintrack.com</a></p>
+                    <p><strong>Partnerships:</strong> <a href="mailto:partnerships@braintrack.com">partnerships@braintrack.com</a></p>
+                </address>
+            </article>
+        </section>
 
-    <form>
-      <div class="row">
-        <input type="text" placeholder="First Name *" required>
-        <input type="text" placeholder="Last Name *" required>
-      </div>
+        <section class="contact-form-section" aria-label="Contact Form">
+            <div class="form-container">
+                <h2>Send Us a Message</h2>
 
-      <div class="row">
-        <input type="email" placeholder="Email Address *" required>
-        <input type="text" placeholder="Phone Number">
-      </div>
+                <form>
+                    <fieldset>
+                        <legend>Message Details</legend>
+                        <div class="row">
+                            <div class="form-group">
+                                <label for="firstName">First Name:</label>
+                                <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name:</label>
+                                <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+                            </div>
+                        </div>
 
-      <select required>
-        <option value="">Select a subject *</option>
-        <option>Food Assistance</option>
-        <option>Donations</option>
-        <option>Volunteer</option>
-      </select>
+                        <div class="row">
+                            <div class="form-group">
+                                <label for="email">Email Address:</label>
+                                <input type="email" id="email" name="email" placeholder="Email Address" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number:</label>
+                                <input type="tel" id="phone" name="phone" placeholder="Phone Number">
+                            </div>
+                        </div>
 
-      <textarea placeholder="Tell us how we can help..." rows="5" required></textarea>
+                        <div class="form-group">
+                            <label for="subject">Subject:</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option>General Inquiry</option>
+                                <option>Technical Support</option>
+                                <option>Feedback</option>
+                                <option>Partnership</option>
+                            </select>
+                        </div>
 
-      <button type="submit">Send Message</button>
-    </form>
-  </div>
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell us how we can help..." required></textarea>
+                        </div>
 
-  <!-- SIDEBAR -->
-  <div class="sidebar">
-    <h3>Direct Contacts</h3>
+                        <button type="submit">Send Message</button>
+                    </fieldset>
+                </form>
+            </div>
 
-    <div class="contact-box">
-      <strong>Any feedback</strong>
-      <p>feedback@braintrack.com</p>
-    </div>
+            <aside class="sidebar" aria-label="Quick Contact Links">
+                <h3>Direct Contacts</h3>
 
-    <div class="contact-box">
-      <strong>Get more study tips</strong>
-      <p>tips@braintrack.com</p>
-    </div>
+                <article class="contact-box">
+                    <h4>Feedback</h4>
+                    <address>
+                        <a href="mailto:feedback@braintrack.com">feedback@braintrack.com</a>
+                    </address>
+                </article>
 
-    <div class="contact-box">
-      <strong>Helpline</strong>
-      <p>support@braintrack.com</p>
-    </div>
+                <article class="contact-box">
+                    <h4>Study Tips</h4>
+                    <address>
+                        <a href="mailto:tips@braintrack.com">tips@braintrack.com</a>
+                    </address>
+                </article>
 
-  </div>
+                <article class="contact-box">
+                    <h4>Helpline</h4>
+                    <address>
+                        <a href="mailto:support@braintrack.com">support@braintrack.com</a>
+                    </address>
+                </article>
+            </aside>
+        </section>
 
-</section>
-
-   
-
-    <p class="quote">Success doesn't come from what you do occasionally, but what you do consistently."</p>
+        <section class="closing" aria-label="Inspirational Quote">
+            <blockquote class="quote">Success doesn't come from what you do occasionally, but what you do consistently.</blockquote>
+        </section>
+    </main>
 
     <footer>
         <p>&copy; 2026 Braintrack. All rights reserved.</p>
