@@ -21,23 +21,88 @@ body {
   margin-bottom: 10px;
 }
 
-/* INFO CARDS */
-.info-cards {
-  display: grid;
-  gap: 0px;
+/* CONTACT INFO FLASHCARDS */
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
   max-width: 1000px;
   margin: 40px auto;
   padding: 20px;
-  justify-items: center;
+  justify-content: center;
 }
 
-.card {
-  width: min(920px, 100%);
+.info-card {
   background: white;
-  padding: 10px;
-  border-radius: 20px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
   border: 4px solid coral;
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.info-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: coral;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+}
+
+.info-card h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.info-card address {
+  font-style: normal;
+  line-height: 1.6;
+}
+
+.info-card p {
+  margin: 12px 0;
+  font-size: 16px;
+}
+
+.info-card strong {
+  color: #2C3E50;
+  font-weight: 600;
+}
+
+.info-card a {
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.info-card a:hover {
+  color: #008080;
+  text-decoration: underline;
+}
+
+.info-card ul {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.info-card li {
+  margin: 5px 0;
+  color: #555;
 }
 
 /* MAIN LAYOUT */
@@ -119,12 +184,18 @@ navbar {
 /* Responsive design for contact page */
 @media (max-width: 768px) {
   .contact-info {
-    display: flex;
     flex-direction: column;
+    align-items: center;
   }
 
   .info-card {
-    margin-bottom: 16px;
+    max-width: 100%;
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+
+  .info-card h2 {
+    font-size: 20px;
   }
 
   .form-container {
