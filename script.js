@@ -51,3 +51,40 @@ if (typeof module !== 'undefined' && module.exports) {
     resetTimer,
   };
 }
+/**
+ * Form validation and submission handling
+ * Validates user input before processing
+ */
+function validateForm(formData) {
+  if (!formData.name || formData.name.trim() === '') {
+    console.error('Name field is required');
+    return false;
+  }
+  if (!formData.email || !isValidEmail(formData.email)) {
+    console.error('Valid email is required');
+    return false;
+  }
+  return true;
+}
+
+/**
+ * Email validation utility function
+ * @param {string} email - Email address to validate
+ * @returns {boolean} - True if email is valid
+ */
+function isValidEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+/**
+ * Clear form inputs and reset validation states
+ * @param {HTMLFormElement} form - Form to reset
+ */
+function clearForm(form) {
+  form.reset();
+  const inputs = form.querySelectorAll('input, textarea, select');
+  inputs.forEach(input => {
+    input.classList.remove('error');
+  });
+}
