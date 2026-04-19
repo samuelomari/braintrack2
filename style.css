@@ -131,3 +131,62 @@ footer p {
 }
 
 
+
+/* Accessibility improvements */
+:focus {
+  outline: 2px solid #6d4edf;
+  outline-offset: 2px;
+}
+
+button:hover,
+input:hover,
+textarea:hover,
+select:hover {
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+fieldset {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px 0;
+}
+
+legend {
+  padding: 0 8px;
+  font-weight: 600;
+  color: #6d4edf;
+}
+
+/* Improve form accessibility */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #333;
+}
+
+address {
+  font-style: normal;
+  line-height: 1.6;
+}
+
+address a {
+  color: #6d4edf;
+  text-decoration: none;
+}
+
+address a:hover {
+  text-decoration: underline;
+}
+
+/* Main content wrapper improvements */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+article {
+  color: inherit;
+}
