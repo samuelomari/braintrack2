@@ -92,6 +92,7 @@ nav a:focus {
 .welcome {
   position: relative;
   z-index: 1;
+  colour:black;
 }
 
 /* Form Styling */

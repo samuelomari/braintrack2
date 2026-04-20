@@ -1,3 +1,27 @@
+const QUOTABLE_API_URL = 'https://api.quotable.io/random';
+
+async function fetchInspirationalQuote() {
+  try {
+    const response = await fetch(QUOTABLE_API_URL);
+    if (!response.ok) {
+      throw new Error('Quote API request failed');
+    }
+
+    const data = await response.json();
+    const quoteElement = document.getElementById('quoteText');
+    const authorElement = document.getElementById('quoteAuthor');
+
+    if (quoteElement) {
+      quoteElement.textContent = data.content;
+    }
+    if (authorElement) {
+      authorElement.textContent = `— ${data.author}`;
+    }
+  } catch (error) {
+    console.error('Unable to fetch quote:', error);
+  }
+}
+
 function addTask() {
   let input = document.getElementById("taskInput");
   let task = input.value;
@@ -124,3 +148,7 @@ function loadTasks() {
 function clearAllTasks() {
   localStorage.removeItem('tasks');
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  fetchInspirationalQuote();
+});
