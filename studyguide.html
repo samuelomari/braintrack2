@@ -58,6 +58,23 @@
                 </ul>
             </article>
         </section>
+ <!--GOALS-->
+        <div class="section">
+            <h2>Goals</h2>
+            <input type="text" id="goalInput" placeholder="Enter a goal" aria-label="New goal">
+            <input type="datetime-local" id="goaldate" aria-label="Goal date">
+            <button onclick="addGoal()" aria-label="Add new goal">Add Goal</button>
+            <ul id="goalList" aria-label="Goal List"></ul>
+        </div>
+
+<!--TASK PLANNER-->
+        <div class="section">
+            <h2>Task planner</h2>
+            <input type="text" id="taskInput" placeholder="Enter a task" aria-label="New task">
+            <input type="datetime-local" id="taskdate" aria-label="Task date">
+            <button onclick="addTask()" aria-label="Add new task">Add Task</button>
+            <ul id="taskList" aria-label="Task List"></ul>
+        </div>
 
         <section class="interactive-tools" aria-label="Study Tools">
             <section class="planner-section" aria-label="Study Planner">
@@ -80,6 +97,18 @@
                 </div>
             </section>
         </section>
+
+        <!--STUDY TRACKER-->
+        <div class="section">
+            <h2>study tracker</h2>
+            <input type="number" id="hours" placeholder="Hours Studied">
+            <input type="number" id="focus" placeholder="Focus Level (1-10)">
+            <button onclick="logStudySession()" aria-label="Log study session">Log Study Session</button>
+
+            <h3>Insights</h3>
+            <p id="insights" aria-live="polite"></p>
+
+        </div>
 
         <section class="closing" aria-label="Inspirational Quote">
             <blockquote class="quote">Success doesn't come from what you do occasionally, but what you do consistently.</blockquote>
