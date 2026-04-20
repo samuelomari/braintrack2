@@ -152,3 +152,7 @@ function clearAllTasks() {
 document.addEventListener('DOMContentLoaded', () => {
   fetchInspirationalQuote();
 });
+
+emailjs.send("service_id", "template_id", {
+  message: "Hello",
+});
